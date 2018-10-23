@@ -13,7 +13,7 @@ Template Name: Mazen - Creative Portfolio Template
 *  04.Home Section
 *  05.About Section 
 *  06.Fun Facts
-*  07.Services Section 
+*  07.Skills Section 
 *  08.Portfolio Section 
 *  09.Blog Section
 *  10.Testimonials Section
@@ -855,10 +855,10 @@ h1, h2, h3, h4,
 
 
 /*=================================*/
-/*  07.Services Section 
+/*  07.Skills Section 
 /*=================================*/
 
-.services .content {
+.skills .content {
     position: relative;
     z-index: 55;
     text-align: center;
@@ -868,7 +868,7 @@ h1, h2, h3, h4,
     margin-bottom: 30px;
 }
 
-.services .icon {
+.skills .icon {
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -879,25 +879,25 @@ h1, h2, h3, h4,
     margin-bottom: 30px;
 }
 
-.services i {
+.skills i {
     font-size: 30px;
     color: #fff;
     line-height: 80px;
 }
 
-.services h3 {
+.skills h3 {
     font-size: 17px;
     font-weight: 600;
     color: #101010;
     margin-bottom: 15px;
 }
 
-.services .item p {
+.skills .item p {
     margin-bottom: 0;
     font-size: 15px;
 }
 
-/*End Services Section*/
+/*End Skills Section*/
 
 
 
