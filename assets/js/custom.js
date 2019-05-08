@@ -21,7 +21,7 @@ $(function () {
     08. Window Scroll
     09. FitText Plugin
     10. counterUp Plugin
-    11. about hover
+    11. tomorrow hover
 
 ======================================*/
 
@@ -44,7 +44,7 @@ $(function () {
             }
         });
         //-- filter items on button click --//
-        $(".portfolio ul li").on('click', function () {
+        $(".topic ul li").on('click', function () {
             var filterValue = $(this).attr('data-filter');
             $grid.isotope({ filter: filterValue });
             $(this).addClass("active_filter").siblings().removeClass("active_filter");
@@ -63,7 +63,7 @@ $(function () {
                 
                 $('.navbar-nav li:first-of-type').addClass('active').siblings().removeClass('active');
                 $('.page-loader').css('animation-name','');
-                $('.home .content').removeClass('opacity-zero');
+                $('.today .content').removeClass('opacity-zero');
                 $('.main_img').removeClass('img-shadow');
                 $('main').removeClass('load-main');
 
@@ -86,21 +86,21 @@ $(function () {
         03. Navbar
     ----------------------------------*/
     //-- navbar mobile menu --//
-    $("nav .navbar-nav li a").on('click', function () {
-        $(".navbar-collapse").removeClass("in");
-        $(".navbar-toggle").addClass("collapsed");
-    });
+    // $("nav .navbar-nav li a").on('click', function () {
+    //     $(".navbar-collapse").removeClass("in");
+    //     $(".navbar-toggle").addClass("collapsed");
+    // });
 
-    function nav__scroll(){
+    // function nav__scroll(){
 
-        if ($(window).scrollTop() >= 50) {
-            $("nav").addClass("nav_scroll");
-        } else {
-            $("nav").removeClass("nav_scroll");
-        }
+    //     if ($(window).scrollTop() >= 50) {
+    //         $("nav").addClass("nav_scroll");
+    //     } else {
+    //         $("nav").removeClass("nav_scroll");
+    //     }
 
-    }
-    nav__scroll();
+    // }
+    // nav__scroll();
     
     /*--------------------------------
         04. Smooth Scroll
@@ -246,31 +246,31 @@ $(function () {
     /*--------------------------------
         08. Window Scroll
     ----------------------------------*/
-    $(window).on("scroll", function () {
+    // $(window).on("scroll", function () {
 
-        var my_skill = ".about .skills .skill";
-        if ($(my_skill).length !== 0){
-            spy_scroll(my_skill); 
-        }
+    //     var my_skill = ".tomorrow .skills .skill";
+    //     if ($(my_skill).length !== 0){
+    //         spy_scroll(my_skill); 
+    //     }
         
-        nav__scroll();
+    //     nav__scroll();
         
-        //-- Scroll top --//
-        var scrollTop = $(".top");
-        if (scrollTop.length !== 0) {
-            if ($(window).scrollTop() >= $(".about").offset().top) {
-                scrollTop.addClass("scroll_top_show");
-            } else {
-                scrollTop.removeClass("scroll_top_show");
-            }
-        }
+    //     //-- Scroll top --//
+    //     var scrollTop = $(".top");
+    //     if (scrollTop.length !== 0) {
+    //         if ($(window).scrollTop() >= $(".tomorrow").offset().top) {
+    //             scrollTop.addClass("scroll_top_show");
+    //         } else {
+    //             scrollTop.removeClass("scroll_top_show");
+    //         }
+    //     }
         
-    });
+    // });
 
     /*--------------------------------
         09. FitText Plugin
     ----------------------------------*/ 
-    $(".home h1").fitText(1, { maxFontSize: 45 });
+    $(".today h1").fitText(1, { maxFontSize: 45 });
 
     /*--------------------------------
         10. counterUp Plugin
@@ -281,9 +281,9 @@ $(function () {
     });
     
     /*--------------------------------
-        11. about hover
+        11. tomorrow hover
     ----------------------------------*/ 
-    $(".more-about-me a").each(function() {
+    $(".more-tomorrow a").each(function() {
         $(this).attr('hover-name', $(this).text() );
     });
 

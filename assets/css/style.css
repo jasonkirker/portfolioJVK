@@ -1,25 +1,12 @@
-/*
-* ----------------------------------------------------
-Author       : Ideas_Factory
-Template Name: Mazen - Creative Portfolio Template
-* ----------------------------------------------------
-*/
-
-/*
-* -----------------------------------------------------
+/* 
 *  01.Common Styles
-*  02.Preloader 
-*  03.Scroll Top
-*  04.Home Section
-*  05.About Section 
-*  06.Fun Facts
-*  07.Skills Section 
-*  08.Portfolio Section 
-*  09.Blog Section
-*  10.Testimonials Section
-*  11.Contact Section 
-*  12.Footer
-* -----------------------------------------------------
+*  02.Scroll Top
+*  03.Today Section
+*  04.Tomorrow Section 
+*  05.Approaching/Topic Section
+*  06.Contact/Newsletter Section 
+*  07.Footer */
+*-----------------------------------------------------
 */
 
 /*=================================*/
@@ -28,7 +15,7 @@ Template Name: Mazen - Creative Portfolio Template
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 body {
@@ -141,7 +128,7 @@ main {
     overflow-x: hidden;
 }
 
-section:not(.home) {
+section:not(.today) {
     position: relative;
     z-index: 5;
 }
@@ -191,52 +178,16 @@ section:not(.home) {
 h1, h2, h3, h4,
 .navbar-nav > li > a,
 .navbar-default .navbar-brand,
-.home .content span,
-.more-about-me span,
-.skills .skill span,
+.today .content span,
+.more-tomorrow span,
+/* .upcomings .upcoming span, */
 .fun_facts .content p,
-.portfolio ul li,
+.topic ul li,
 .testimonials .name-job .name {
     font-family: 'Montserrat', sans-serif;
 }
 /*End Common Styles*/
 
-
-
-/*=================================*/
-/*  02.Preloader 
-/*=================================*/
-
-.page-loader,
-.preloader {
-    display:block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    background: #fff;   
-}
-
-.loader {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: calc(50% + 130px);
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    font-size: 10px;
-    text-indent: -12345px;
-    border-top: 2px solid rgba(0,0,0, 0.08);
-    border-right: 2px solid rgba(0,0,0, 0.08);
-    border-bottom: 2px solid rgba(0,0,0, 0.08);
-    border-left: 2px solid rgba(0,0,0, 1);
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-animation: spinner 700ms infinite linear;
-    animation: spinner 700ms infinite linear;
-}
 
 @-webkit-keyframes spinner {
   0% {
@@ -346,10 +297,8 @@ h1, h2, h3, h4,
 
 /*End Preloader*/
 
-
-
 /*=================================*/
-/*  03.Scroll Top
+/*  02.Scroll Top
 /*=================================*/
 
 .top {
@@ -383,7 +332,7 @@ h1, h2, h3, h4,
 
 
 /*=================================*/
-/*  04.Home Section
+/*  03.Today Section
 /*=================================*/
 
 
@@ -440,14 +389,14 @@ h1, h2, h3, h4,
 
 .navbar-default {
     z-index: 10;
-    background-color: transparent;
+    /* background-color: transparent; */
     border: none;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar-default .navbar-brand {
-    color: #fff;
+    color: #dc3652;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -464,11 +413,12 @@ h1, h2, h3, h4,
     transition: all 0.3s ease-in-out;
 }
 
+/* CONTROL NAV BAR FONT SIZES WEIGHTS AND COLORS */
 .navbar-default .navbar-nav > li > a {
     padding: 0 5px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    color: #dc3652;
     text-transform: uppercase;
 }
 
@@ -503,7 +453,7 @@ h1, h2, h3, h4,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #fff;
+    color: #4fc2e6;
     background-color: transparent;
 }
 
@@ -546,7 +496,7 @@ h1, h2, h3, h4,
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #dc3652;
     height: 2px;
     width: 22px;
     transition: all 0.2s;
@@ -575,16 +525,20 @@ h1, h2, h3, h4,
     opacity: 1 !important;
 }
 
-.home .overlay {
+/* THIS COULD MAKE AN OVERLAY OF THE TODAY AND UP TO THE NAV BAR */
+.today .overlay {
     height: 100%;
-    background-color: rgba(0,0,0,0.55);
+    position: right;
+
+    /* background-color: rgba(0,0,0,0.55); */
 }
 
-.home .wrapper {
-    height: 100%;
+/* THIS WILL ALLOW THE OVERLAY RECTANGLE TO MOVE AROUND */
+.today .wrapper {
+    height: 50%;
 }
 
-.home .content {
+.today .content {
     text-align: center;
     background-color: #fafafa;
     width: 500px;
@@ -602,7 +556,7 @@ h1, h2, h3, h4,
     opacity: 0;
 }
 
-.home .content:after {
+/* .today .content:after {
     content: "";
     width: calc(100% - 20px);
     height: calc(100% - 20px);
@@ -610,9 +564,9 @@ h1, h2, h3, h4,
     top: 10px;
     left: 10px;
     border: 1px solid rgba(0, 0, 0, 0.23);
-}
+} */
 
-.home h1 {
+.today h1 p {
     font-size: 45px;
     font-weight: 900;
     color: #232323;
@@ -623,7 +577,7 @@ h1, h2, h3, h4,
     margin-bottom: 35px;
 }
 
-.home h1:after {
+.today h1 p:after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -634,13 +588,14 @@ h1, h2, h3, h4,
     background: #000;
 }
 
-.home .content span:not(.cd-words-wrapper) {
+.today .content span:not(.cd-words-wrapper) {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #111;
 }
 
+/* test this and z-index */
 #particles-js{
     position: absolute;
     top: 0;
@@ -697,24 +652,25 @@ h1, h2, h3, h4,
 }
 
 
-/*End Home Section */
+/*End Today Section */
 
 
 
 /*=================================*/
-/*  05.About Section 
+/*  04.Tomorrow Section 
 /*=================================*/
 
 
-.about h3 {
+.tomorrow h3 {
     font-size: 24px;
     font-weight: 700;
     color: #111;
+    margin-top: 20px;
     margin-bottom: 18px;
     text-transform: capitalize;
 }
 
-.about h3:after {
+.tomorrow h3:after {
     content: "";
     width: 39px;
     height: 2px;
@@ -724,7 +680,7 @@ h1, h2, h3, h4,
     margin-bottom: 25px;
 }
 
-.more-about-me span {
+.more-tomorrow span {
     display: inline-block;
     position: relative;
     font-size: 16px;
@@ -734,13 +690,13 @@ h1, h2, h3, h4,
     margin-right: 5px;
 }
 
-.more-about-me span:after {
+.more-tomorrow span:after {
     content: ":";
     position: absolute;
     right: 0;
 }
 
-.more-about-me a {
+.more-tomorrow a {
     display: inline-block;
     position: relative;
     font-size: 18px;
@@ -749,7 +705,7 @@ h1, h2, h3, h4,
     margin: 0 6px;
 }
 
-.more-about-me a:after {
+.more-tomorrow a:after {
     content: attr(hover-name);
     color: #111;
     position: absolute;
@@ -761,104 +717,63 @@ h1, h2, h3, h4,
     transition: all 0.3s ease-in-out;
 }
 
-.more-about-me a:hover:after {
+.more-tomorrow a:hover:after {
     width: 100%;
 }
 
-.about .follow a,
-.about .hire a {
+.tomorrow .follow a,
+.tomorrow .hire a {
     margin-right: 18px;
 }
 
-.about .follow a:before,
-.about .hire a:before {
+.tomorrow .follow a:before,
+.tomorrow .hire a:before {
     content: "-";
     position: absolute;
     right: -18px;
     top: 1px;
 }
 
-.about .follow a:last-of-type:before,
-.about .hire a:last-of-type:before {
+.tomorrow .follow a:last-of-type:before,
+.tomorrow .hire a:last-of-type:before {
     content: "";
 }
 
-.about .skills {
+.tomorrow .upcomings {
     margin-top: 20px;
 }
 
-.about .skills .skill {
+.tomorrow .upcomings .upcoming {
     margin-bottom: 30px;
     visibility: hidden;
 }
 
-.about .skills .skill .progress_bg {
+.tomorrow .upcomings .upcoming .progress_bg {
     background-color: rgba(0, 0, 0, 0.06);
 }
 
-.about .skills .skill .progress_bar {
+.tomorrow .upcomings .upcoming .progress_bar {
     height: 5px;
     background-color: #222;
 }
 
-.about .skills .skill span {
+.tomorrow .upcomings .upcoming span {
     font-size: 14px;
     font-weight: 600;
     color: #222;
 }
 
-.about .skills .skill span:last-of-type {
+.tomorrow .upcomings .upcoming span:last-of-type {
     float: right;
 }
 
-/*End About Section*/
-
-
+/*End Tomorrow Section*/
 
 /*=================================*/
-/*  06.Fun Facts
+/*  05.Upcoming Section 
 /*=================================*/
 
-.fun_facts {
-    background: #141414;
-}
-
-.fun_facts .content {
-    text-align: center;
-}
-
-.fun_facts .content i {
-    font-size: 44px;
-    color: #fff;
-    margin-bottom: 12px;
-}
-
-.fun_facts .content p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #999;
-    text-transform: capitalize;
-}
-
-.fun_facts .content .counter {
-    display: block;
-    font-size: 28px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.91);
-    line-height: 1;
-    margin-top: 8px;
-    margin-bottom: 2px;
-}
-
-/*End Fun Facts*/
-
-
-
-/*=================================*/
-/*  07.Skills Section 
-/*=================================*/
-
-.skills .content {
+.upcomings .content {
     position: relative;
     z-index: 55;
     text-align: center;
@@ -868,7 +783,7 @@ h1, h2, h3, h4,
     margin-bottom: 30px;
 }
 
-.skills .icon {
+.upcomings .icon {
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -879,43 +794,36 @@ h1, h2, h3, h4,
     margin-bottom: 30px;
 }
 
-.skills i {
+.upcomings i {
     font-size: 30px;
     color: #fff;
     line-height: 80px;
 }
 
-.skills h3 {
+.upcomings h3 {
     font-size: 17px;
     font-weight: 600;
     color: #101010;
     margin-bottom: 15px;
 }
 
-.skills .item p {
+.upcomings .item p {
     margin-bottom: 0;
     font-size: 15px;
 }
 
-/*End Skills Section*/
-
-
-
-/*=================================*/
-/*  08.Portfolio Section 
-/*=================================*/
 
 .zoom-anim-dialog {
     padding-top: 40px;
 }
 
-.portfolio .ul-filter {
+.topic .ul-filter {
     text-align: center;
     margin-bottom: 40px;
     line-height: 1.8;
 }
 
-.portfolio ul li {
+.topic ul li {
     display: inline-block;
     padding: 0 10px;
     margin-left: 10px;
@@ -929,35 +837,35 @@ h1, h2, h3, h4,
     transition: all 0.2s ease-in-out 0.2s;
 }
 
-.portfolio ul li.active_filter,
-.portfolio ul li:hover {
+.topic ul li.active_filter,
+.topic ul li:hover {
     color: #000;
 }
 
-.portfolio .grid-item {
+.topic .grid-item {
     margin-bottom: 30px;
 }
 
-.portfolio .box {
+.topic .box {
     position: relative;
     overflow: hidden;
 }
 
-.portfolio .box img {
+.topic .box img {
     width: 100%;
     height: auto;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
-.portfolio .box:hover img{
+.topic .box:hover img{
     -webkit-filter: blur(12px);
     filter: blur(12px);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
-.portfolio .box .boxContent {
+.topic .box .boxContent {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -974,12 +882,12 @@ h1, h2, h3, h4,
     transition: all 0.3s;
 }
 
-.portfolio .box:hover .boxContent {
+.topic .box:hover .boxContent {
     opacity: 1;
     transform: scale(1);
 }
 
-.portfolio .box .title {
+.topic .box .title {
     font-size: 20px;
     font-weight: 500;
     color: #fff;
@@ -989,7 +897,7 @@ h1, h2, h3, h4,
     margin-top: 5px;
 }
 
-.portfolio .box .post {
+.topic .box .post {
     display: block;
     font-size: 15px;
     font-weight: 400;
@@ -1065,145 +973,11 @@ h1, h2, h3, h4,
     font-size: 16px;
 }
 
-/*End Portfolio Section*/
-
-
-
-/*=================================*/
-/*  09.Blog Section
-/*=================================*/
-
-.blog .item,
-.blog .item .blog__img {
-    overflow: hidden;
-    position: relative;
-}
-
-.blog .content {
-    background-color: #fff;
-    padding: 15px 15px;
-    padding-bottom: 5px;
-    padding-top: 0;
-    border: 1px solid #eee;
-}
-
-.blog .content .blog-date {
-    display: block;
-    padding-top: 28px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.55);
-}
-
-.blog h3 {
-    color: #111;
-    text-transform: capitalize;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.6;
-    margin-bottom: 7px;
-    margin-top: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.blog h3:hover {
-    opacity: 0.7;
-}
-
-.blog .content p {
-    font-size: 15px;
-}
-
-/*End Blog Section*/
-
+/*End Topic Section*/
 
 
 /*=================================*/
-/*  10.Testimonials Section
-/*=================================*/
-
-.testimonials {
-    background-color: #141414;
-}
-
-.testimonials .quotes {
-    width: 40px;
-    margin: auto;
-    display: block;
-    margin-bottom: 25px;
-}
-
-.testimonials .testimonial {
-    width: 90%;
-    margin: auto;
-    cursor: move;
-    text-align: center;
-}
-
-.testimonials .name-job {
-    text-align: center;
-    margin-top: 25px;
-    line-height: 1.8;
-}
-
-.testimonials .testimonial p {
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.testimonials .name-job .name {
-    color: #f5f5f5;
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.testimonials .name-job .job {
-    color: rgba(185, 185, 185, 0.53);
-    margin-top: 8px;
-    font-weight: 500;
-}
-
-.testimonials .name-job .job:before {
-    content: "";
-    width: 8px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.34);
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-bottom: 3px;
-}
-
-.owl-pagination {
-    margin-top: 40px;
-}
-
-.owl-theme .owl-controls .owl-page span {
-    background-color: #AFAFAF;
-    width: 10px;
-    height: 10px;
-    margin-bottom: 0;
-    border-radius: 50%;
-    transform: scale(0.8);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.owl-theme .owl-controls .owl-page.active span,
-.owl-theme .owl-controls.clickable .owl-page:hover span {
-    transform: scale(1);
-    background: rgba(255, 255, 255, 0.97);
-}
-
-/*End Testimonials Section*/
-
-
-
-/*=================================*/
-/*  11.Contact Section 
+/*  06.Contact Section 
 /*=================================*/
 
 input.form-control {
@@ -1324,7 +1098,7 @@ input.form-control:last-of-type {
 
 
 /*=================================*/
-/*  12.Footer
+/*  07.Footer
 /*=================================*/
 
 footer .footer-info {
@@ -1332,18 +1106,6 @@ footer .footer-info {
     background-color: #141414;
 }
 
-footer .footer-bottom {
-    padding-bottom: 20px;
-    padding-top: 28px;
-    background: #000;
-}
-
-footer .info span {
-    font-size: 32px;
-    display: block;
-    position: relative;
-    color: #fff;
-}
 
 footer .info span:after {
     content: "";
@@ -1353,14 +1115,6 @@ footer .info span:after {
     width: 1px;
     height: 41px;
     background-color: rgba(206, 204, 204, 0.38);
-}
-
-footer .info .item:last-of-type span:after {
-    background-color: transparent;
-}
-
-footer .content div {
-    margin-top: 15px;
 }
 
 footer p {
